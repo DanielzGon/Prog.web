@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS para interface</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+        function mudarCor() {
+            var div = document.getElementById("caixa")
+            div.style = "background-color: grey"
+        }
+        function posicaoAleatoria(){
+            var aleatoria1 = Math.random() * 1000
+            var aleatoria2 = Math.random() * 1000
+            var fujao = document.getElementById("corredor")
+            fujao.style.left = aleatoria1 + "px"
+            fujao.style.top = aleatoria2 + "px"
+        }
+
+    </script>
+</head>
+
+<body>
+    <div onclick="mudarCor()" id="caixa">Caixa</div>
+    <br>
+    <div id="corredor" onmouseover="posicaoAleatoria()">Caixa 2</div>
+</body>
+
+</html>
